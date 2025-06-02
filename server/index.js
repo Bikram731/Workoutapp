@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
 const connectDB = () => {
   mongoose.set("strictQuery", true);
   mongoose
-    .connect(process.env.MONGODB_URL)
+    .connect('mongodb+srv://bikramdeep:1234@mernapp.xdeoukf.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp')
     .then(() => console.log("Connected to Mongo DB"))
     .catch((err) => {
       console.error("failed to connect with mongo");
